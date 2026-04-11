@@ -490,7 +490,13 @@ enum DebugHarness {
     // MARK: - Stress Test (30 sessions)
 
     private static func applyStress(to state: AppState) {
-        let sources = ["claude", "codex", "gemini", "cursor", "copilot", "qoder", "droid", "codebuddy", "opencode"]
+        let sources = [
+            "claude", "codex", "gemini",
+            "cursor", "trae", "traecn",
+            "copilot", "qoder", "droid",
+            "codebuddy", "codybuddycn", "stepfun",
+            "opencode"
+        ]
         let statuses: [AgentStatus] = [.running, .processing, .idle, .waitingApproval, .waitingQuestion]
         let tools = ["Edit", "Read", "Bash", "Write", "Grep", "Agent"]
         let projects = ["frontend", "backend", "api", "mobile", "infra", "docs", "cli", "sdk", "web", "core"]
